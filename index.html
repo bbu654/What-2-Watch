@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <title>HTML Test</title>
+    <script type="text/javascript">
+        var output1 = document.getElementById("output1");
+        var output2 = document.getElementById("output2");
+        var output3 = document.getElementById("output3");
+        function helloWorld(world) {
+            var output1 = document.getElementById("output1");
+            for (var i = 4; --i >= 1;) {
+                 output1.innerHTML += ("</br>");
+                 output1.innerHTML += ("&nbsp;&nbsp;&nbsp;" + i + '. TV List for ' + String(world) );
+                                       }
+                                    }
+
+    </script>
+<style type="text/css">
+p { color: pink }
+b { color: blue }
+u { color: "umber" }
+thead, pre { color: red   }
+th  {
+     background-color: #4CAF50;
+     color: white;
+    }
+h1 {text-align: center; color: brown}
+</style>
+</head>
+<body>
+<h1 text-align: center>Hello world!</h1>
+<p>Be advised: some of the events listed may not have televised ceremonies, but broadcast information is included where appropriate. All hours listed are Eastern Standard Time.</p><ol></ol>
+<li><strong>76th Golden Globe Awards</strong> - Jan. 6 at 8 p.m. on NBC</li>
+<li><strong>24th Critics' Choice Awards</strong> - Jan. 13 at 7 p.m. on The CW</li>
+<li><strong>30th Producers Guild of America Awards</strong> - Jan. 19</li>
+<li><strong>25th Screen Actors Guild Awards</strong> - Jan. 27 at 8 p.m. on TNT and TBS</li>
+<li><strong>71st Director Guild of America Awards</strong> - Feb. 2</li>
+<li><strong>33rd American Society of Cinematographers Awards</strong> - Feb. 9</li>
+<li><strong>61st Grammy Awards</strong> - Feb. 10 at 8 p.m. on CBS</li>
+<li><strong>72nd British Academy of Film and Television Arts Awards</strong> - Feb. 10</li>
+<li><strong>23rd Satellite Awards</strong> - Feb. 17</li>
+<li><strong>71st Writers Guild of America Awards</strong> - Feb. 17</li>
+<li><strong>34th Film Independent Spirit Awards</strong> - Feb. 23 at 5 p.m. on IFC</li>
+<li><strong>91st Academy Awards</strong> - Feb. 24 at 8 p.m. on ABC</li>
+<li><strong>73rd Tony Awards</strong> - June 9 at 8 p.m. on CBS</li>
+
+<b><span id="output" ></span></b>
+<b><span id="output1"></span></b>
+   <span id="output2"></span>
+   <span id="output3"></span>
+<table id="bbutable" style="margin-left: 10px;">
+    <thead><tr><th>Title</th><th>Start Date</th><th>Day</th><th>Time</th><th>Channel</th><th>Season</th><th>Comment</th></tr></thead>
+</table>
+<script type="text/javascript">
+helloWorld("Brice");    
+var output  = document.getElementById("output");
+var output1 = document.getElementById("output1");
+var output2 = document.getElementById("output2");
+var output3 = document.getElementById("output3");
+var bbutable = document.getElementById("bbutable");
+
+var watchList = [   {"StartDate": "09/12/2018 22:00:00", "Day": "Wednesday",  "Time": "10:00pm", "Channel": "FX 1017", "Season": "1", "Title": "American Horror Story: Apocalypse", "__Comment": "n/a" },
+                    {"StartDate": "11/16/2018 00:00:00", "Day": "Friday"   ,  "Time": "12:00am", "Channel": "Netflix", "Season": "1", "Title": "The Kominsky Method", "__Comment": "Follows Sandy Kominsky, an actor who years ago had a brief fling with success and is now a revered Hollywood acting coach." },
+                    {"StartDate": "11/28/2018 21:00:00", "Day": "Wednesday",  "Time": "09:00pm", "Channel": "Hst  62", "Season": "1", "Title": "Vikings", "__Comment": "Chronicling the medieval adventures of a band of Norsemen." },
+                    {"StartDate": "07/20/2018 21:00:00", "Day": "Friday",     "Time": "09:00pm", "Channel": "Syfy 61", "Season": "3", "Title": "Wynonna Earp", "__Comment": "n/a" }  ];
+
+bbutable.innerHTML += "<tbody>"; 
+var pp = 0 ;
+for (var x in watchList) { 
+     var jj = x;
+     if (pp%2 == 0) {jj = '<tr style="background-color: white"><td>';}
+     else {jj = '<tr style="background-color: lightgrey"><td>';}
+     pp = pp + 1;
+     td_end_begin_lit = "</td><td>";
+     jj += watchList[x].Title;
+     jj += td_end_begin_lit;
+     jj += watchList[x].StartDate;
+     jj += td_end_begin_lit;
+     jj += watchList[x].Day;
+     jj += td_end_begin_lit;
+     jj += watchList[x].Time;
+     jj += td_end_begin_lit;
+     jj += watchList[x].Channel;
+     jj += td_end_begin_lit;
+     jj += watchList[x].Season;
+     jj += td_end_begin_lit;
+     jj += watchList[x].__Comment;
+     jj += td_end_begin_lit;
+ bbutable.innerHTML += jj;         }
+
+</script>
+</body>
+
+</html>
